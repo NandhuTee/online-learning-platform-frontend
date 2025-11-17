@@ -19,7 +19,7 @@ export default function DashboardPage() {
     }
 
     async function loadCourses() {
-      const res = await fetch("${process.env.NEXT_PUBLIC_API_URL}/api/courses");
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/courses`);
       const data = await res.json();
       setCourses(data);
     }

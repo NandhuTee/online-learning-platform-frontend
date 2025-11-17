@@ -45,7 +45,7 @@ export default function AddCoursePage() {
     if (video) fd.append("video", video);
 
     try {
-      const res = await fetch("${process.env.NEXT_PUBLIC_API_URL}/api/courses/create", {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/courses/create`, {
         method: "POST",
         headers: { Authorization: `Bearer ${token}` },
         body: fd,

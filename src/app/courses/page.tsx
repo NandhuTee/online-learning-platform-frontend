@@ -8,7 +8,7 @@ export default function CoursesPage() {
 
   useEffect(() => {
     async function load() {
-      const res = await fetch("${process.env.NEXT_PUBLIC_API_URL}/api/courses");
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/courses`);
       const data = await res.json();
       setCourses(data);
     }
