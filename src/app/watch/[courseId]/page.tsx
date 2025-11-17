@@ -17,7 +17,7 @@ export default function WatchPage({
   useEffect(() => {
     async function load() {
       const token = localStorage.getItem("token");
-      const res = await fetch(`https://online-learning-platform-backend-gf68.onrender.com/api/videos/enrolled/${courseId}`, {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/videos/enrolled/${courseId}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
 

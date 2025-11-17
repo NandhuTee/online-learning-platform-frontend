@@ -17,7 +17,7 @@ export default function MyLearning() {
     }
 
     async function load() {
-      const res = await fetch("https://online-learning-platform-backend-gf68.onrender.com/api/enrollments/my-courses", {
+      const res = await fetch("${process.env.NEXT_PUBLIC_API_URL}/api/enrollments/my-courses", {
         headers: { Authorization: `Bearer ${token}` }
       });
 
