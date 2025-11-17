@@ -19,7 +19,7 @@ export default function DashboardPage() {
     }
 
     async function loadCourses() {
-      const res = await fetch("http://localhost:5000/api/courses");
+      const res = await fetch("https://online-learning-platform-backend-gf68.onrender.com/api/courses");
       const data = await res.json();
       setCourses(data);
     }

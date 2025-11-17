@@ -23,7 +23,7 @@ export default function CourseDetailPage({
 
   useEffect(() => {
     async function load() {
-      const res = await fetch(`http://localhost:5000/api/courses/${id}`);
+      const res = await fetch(`https://online-learning-platform-backend-gf68.onrender.com/api/courses/${id}`);
       const data = await res.json();
       setCourse(data);
     }

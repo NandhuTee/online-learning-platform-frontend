@@ -45,7 +45,7 @@ export default function AddCoursePage() {
     if (video) fd.append("video", video);
 
     try {
-      const res = await fetch("http://localhost:5000/api/courses/create", {
+      const res = await fetch("https://online-learning-platform-backend-gf68.onrender.com/api/courses/create", {
         method: "POST",
         headers: { Authorization: `Bearer ${token}` },
         body: fd,
@@ -121,7 +121,9 @@ export default function AddCoursePage() {
           className="w-full bg-indigo-600 py-2 rounded-lg"
         >
           {loading ? "Adding..." : "Add Course"}
+          
         </button>
+        
       </form>
 
       {message && (
