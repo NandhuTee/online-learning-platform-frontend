@@ -5,3 +5,17 @@ const nextConfig: NextConfig = {
 };
 
 export default nextConfig;
+module.exports = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "online-learning-platform-backend-gf68.onrender.com",
+      },
+      {
+        protocol: "https",
+        hostname: "*.supabase.co",
+      },
+    ],
+  },
+};

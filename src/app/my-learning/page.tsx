@@ -2,8 +2,16 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import { Course } from "@/types/course";
-import Image from "next/image";
+interface Course {
+  id: string;
+  title: string;
+  description: string;
+  thumbnail?: string | null;
+  isFree: boolean;
+  price?: number | null;
+}
+
+
 
 export default function MyLearning() {
   const [courses, setCourses] = useState<Course[]>([]);
@@ -15,10 +23,10 @@ export default function MyLearning() {
       router.push("/login");
       return;
     }
-
     async function load() {
-      const res = await fetch("${process.env.NEXT_PUBLIC_API_URL}/api/enrollments/my-courses", {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/enrollments/my-courses`, {
         headers: { Authorization: `Bearer ${token}` }
+      });
       });
 
       const data = await res.json();
